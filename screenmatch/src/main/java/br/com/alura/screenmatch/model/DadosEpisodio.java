@@ -1,4 +1,12 @@
 package br.com.alura.screenmatch.model;
 
-public record DadosEpisodio() {
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public record DadosEpisodio(@JsonAlias("Title") String titulo,
+                            @JsonAlias("Episodes") Integer numero,
+                            @JsonAlias("imdbRating") String avaliaca,
+                            @JsonAlias("Released") String dataLancamento)
+{
 }
