@@ -10,7 +10,6 @@ public class Episodio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     private Integer temporada;
     private String titulo;
     private Integer numeroEpisodio;
@@ -39,6 +38,7 @@ public class Episodio {
         }
 
     }
+
 
     public long getId() {
         return id;
@@ -95,6 +95,8 @@ public class Episodio {
     public void setTemporada(Integer temporada) {
         this.temporada = temporada;
     }
+
+
 
     @Override
     public String toString() {
